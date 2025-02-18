@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE SELLA ZONE</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #FF1493;
+            font-family: "Comic Sans MS", cursive;
+            margin: 0;
+            background-image: url("https://example.com/glitter.gif");
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 800px;
+            background-color: #0a0a0a;
+            border: 5px solid #FF00FF;
+            box-shadow: 0 0 15px #FF00FF;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #000000;
+            padding: 20px;
+            border-bottom: 5px solid #FF00FF;
+        }
+
+        .header h1 {
+            color: #FFFFFF;
+            text-shadow: 2px 2px #FF00FF,
+                        4px 4px #FF1493;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid #FF00FF;
+            margin: 10px;
+            color: #FFFFFF;
+        }
+
+        .navigation {
+            background-color: #000000;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #FF00FF;
+        }
+
+        .section {
+            margin: 15px;
+            padding: 15px;
+            background-color: #1a1a1a;
+            border: 3px solid #FF00FF;
+            text-align: center;
+            box-shadow: 0 0 10px #FF1493;
+        }
+
+        a {
+            color: #FF1493;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+            text-shadow: 0 0 10px #FF00FF;
+        }
+
+        marquee {
+            color: #FF00FF;
+            font-size: 20px;
+            text-shadow: 0 0 5px #FFFFFF;
+        }
+
+        blink {
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .sparkle {
+            animation: sparkle 1.5s infinite;
+        }
+
+        @keyframes sparkle {
+            0% { text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FF00FF; }
+            50% { text-shadow: 0 0 20px #FFFFFF, 0 0 30px #FF00FF; }
+            100% { text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FF00FF; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="sparkle">THE SELLA ZONE</h1>
+            <marquee>!!! WARNING: THIS PAGE CONTAINS SELLA KINO. ENTER AT YOUR OWN RISK. !!!</marquee>
+        </div>
+
+        <div class="content">
+            <p>Welcome to the Sella Zone. This is where you can find all content relating to Sid & Bella, including information and lore, written works, art and more.</p>
+            <p class="sparkle">ouughhh sid and bella oh yeah oh yeah sid and bella oughhhhhh</p>
+        </div>
+
+        <div class="navigation">
+            <div class="section">
+                <a href="page1.html">~*~ SELLA LORE ~*~</a>
+            </div>
+            <div class="section">
+                <a href="sellazone/sellafic1.html">~*~ FANFICTION ~*~</a>
+            </div>
+            <div class="section">
+                <a href="page3.html">~*~ ART GALLERY ~*~</a>
+            </div>
+            <div class="section">
+                <a href="page4.html">~*~ JOIN THE SELLAPOSTING ~*~</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
