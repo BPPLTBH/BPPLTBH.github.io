@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LORE - THE SELLA ZONE</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #FF1493;
+            font-family: "Comic Sans MS", cursive;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .container {
+            width: 800px;
+            background-color: #0a0a0a;
+            border: 5px solid #FF00FF;
+            box-shadow: 0 0 15px #FF00FF;
+        }
+        .header {
+            text-align: center;
+            background-color: #000000;
+            padding: 20px;
+            border-bottom: 5px solid #FF00FF;
+        }
+        .header h1 {
+            color: #FFFFFF;
+            text-shadow: 2px 2px #FF00FF,
+                        4px 4px #FF1493;
+            margin: 0;
+            padding: 20px;
+        }
+        .content {
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #FF00FF;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #FFFFFF;
+            line-height: 1.6;
+        }
+        .sparkle {
+            animation: sparkle 1.5s infinite;
+        }
+        @keyframes sparkle {
+            0% { text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FF00FF; }
+            50% { text-shadow: 0 0 20px #FFFFFF, 0 0 30px #FF00FF; }
+            100% { text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FF00FF; }
+        }
+        .navigation {
+            background-color: #000000;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #FF00FF;
+            text-align: center;
+        }
+        .back-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 5px 15px;
+            border: 2px solid #FF00FF;
+            box-shadow: 0 0 10px #FF1493;
+            color: #FF1493;
+            text-decoration: none;
+        }
+        .back-button:hover {
+            color: #FFFFFF;
+            text-shadow: 0 0 10px #FF00FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="sparkle">THE SELLA LORE</h1>
+        </div>
+        <div class="content">
+            <!-- Add your text content here -->
+            COMING SOON.
+        </div>
+        <div class="navigation">
+            <a href="../index.html" class="back-button">BACK TO ONEOFEA.CH</a>
+            <a href="sella.html" class="back-button">BACK TO THE SELLA ZONE</a>
+        </div>
+    </div>
+</body>
+</html>
