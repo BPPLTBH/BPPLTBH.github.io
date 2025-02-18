@@ -1,16 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>ONEOFEA.CH</title>
     <style>
         body {
-            background-image: url('assets/images/gurnandance.gif');
-            background-repeat: repeat;
-			background-size: auto;
+            background-color: #000000;
+            color: #00FF00;
+            font-family: "Comic Sans MS", cursive;
+            margin: 0;
+            background-image: url("https://example.com/stars.gif");
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px 0;
         }
+        .container {
+            width: 800px;
+            background-color: #000080;
+            border: 5px solid #FF00FF;
+        }
+        .header {
+            text-align: center;
+            background-color: #000080;
+            padding: 20px;
+            border-bottom: 5px solid #FF00FF;
+        }
+        .header h1 {
+            color: #FFFF00;
+            text-shadow: 2px 2px #FF0000;
+        }
+        .content {
+            padding: 20px;
+            background-color: #000080;
+            border: 2px solid #00FF00;
+            margin: 10px;
+        }
+        .navigation {
+            background-color: #000080;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #00FF00;
+        }
+        a {
+            color: #FF00FF;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #FFFF00;
+            text-decoration: underline;
+        }
+        marquee {
+            color: #FF0000;
+            font-size: 20px;
+        }
+        blink {
+            animation: blink 1s step-start infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+		
+        .red-link {
+            color: #FF0000;
+        }
+        
+        .red-link:hover {
+            color: #FF0000 !important;
+            text-decoration: none !important;
+        }
+
     </style>
 </head>
 <body>
-    <h1>GURN GURN...</h1>
-    <p>...he want boing boing.</p>
+    <div class="container">
+        <div class="header">
+            <h1>ONEOFEA.CH</h1>
+            <marquee>*** UNDER CONSTRUCTION ***</marquee>
+        </div>
+        <div class="content">
+            <blink>NEW!</blink>
+            <p>The number one location for all things Church related. (not the church like a christian church but church like lee matthews and zood and gurnan and such)</p>
+            <p>Speaking of Gurnan.... He want boing boing.</p>
+            <img src="assets/images/gurnandance.gif" alt="Under Construction">
+        </div>
+        <div class="navigation">
+            <h2>Cool Links:</h2>
+            <ul>
+                <li><a href="about.html">LINK</a></li>
+                <li><a href="photos.html">LINK</a></li>
+                <li><a href="links.html">LINK</a></li>
+                <li><a href="sella.html">SELLA</a> <a class="red-link"><blink>(WARNING: DO NOT CLICK!!!)</blink></a></li>
+            </ul>
+            <p align="center">
+                <img src="/api/placeholder/88/31" alt="Best viewed with Netscape">
+                <img src="/api/placeholder/88/31" alt="HTML 3.2 Validated">
+            </p>
+        </div>
+    </div>
 </body>
 </html>
