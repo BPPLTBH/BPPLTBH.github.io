@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE SELLA ZONE - ART GALLERY</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #FF00FF;
+            font-family: "Comic Sans MS", cursive;
+            margin: 0;
+            background-image: url("https://example.com/stars.gif");
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 1200px;
+            background-color: #0a0a0a;
+            border: 5px solid #FF00FF;
+            box-shadow: 0 0 15px #FF00FF;
+        }
+
+        .header {
+            text-align: center;
+            background-color: #000000;
+            padding: 20px;
+            border-bottom: 5px solid #FF00FF;
+        }
+
+        .header h1 {
+            color: #FFFFFF;
+            text-shadow: 2px 2px #FF00FF,
+                        4px 4px #FF1493;
+        }
+
+        .gallery {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            cursor: pointer;
+            border: 3px solid #FF00FF;
+            box-shadow: 0 0 10px #FF1493;
+            transition: all 0.3s ease;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #FF00FF;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            border: 5px solid #FF00FF;
+            box-shadow: 0 0 30px #FF00FF;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #FF00FF;
+            font-size: 40px;
+            cursor: pointer;
+            text-shadow: 0 0 10px #FF00FF;
+        }
+
+        .navigation {
+            background-color: #000000;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #FF00FF;
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 5px 15px;
+            border: 2px solid #FF00FF;
+            box-shadow: 0 0 10px #FF1493;
+            color: #FF1493;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            color: #FFFFFF;
+            text-shadow: 0 0 10px #FF00FF;
+        }
+
+        marquee {
+            color: #FF00FF;
+            font-size: 20px;
+            text-shadow: 0 0 5px #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>THE SELLA ART GALLERY</h1>
+            <marquee>~*~*~ CLICK IMAGES TO ENLARGE ~*~*~</marquee>
+        </div>
+
+        <div class="gallery">
+            <!-- Replace the /api/placeholder/ URLs with your actual image paths -->
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella1.jpg" alt="Art 1">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sid1.jpg" alt="Art 2">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella2.jpg" alt="Art 3">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sid2.jpg" alt="Art 4">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella3.jpg" alt="Art 5">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sid3.jpg" alt="Art 6">
+            </div>
+			<div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella4.gif" alt="Art 7">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sid4.jpg" alt="Art 8">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella5.jpg" alt="Art 9">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sid5.jpg" alt="Art 10">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella6.jpg" alt="Art 11">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sid6.jpeg" alt="Art 12">
+            </div>
+			<div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella7.jpg" alt="Art 13">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sid7.webp" alt="Art 14">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella8.jpg" alt="Art 15">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sid8.jpg" alt="Art 16">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella9.jpg" alt="Art 17">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sid9.jpg" alt="Art 18">
+            </div>
+			<div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella10.jpg" alt="Art 19">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bella11.jpg" alt="Art 20">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/belladance.gif" alt="Art 21">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sidfurry.jpg" alt="Art 22">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/bellafurry.jpg" alt="Art 23">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/selladance.png" alt="Art 24">
+            </div>
+			<div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sellasit.png" alt="Art 25">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sellak.jpg" alt="Art 26">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sellaemo.png" alt="Art 27">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sellastance.png" alt="Art 28">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sellazim.png" alt="Art 29">
+            </div>
+            <div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sellaponies.png" alt="Art 30">
+            </div>
+			<div class="gallery-item" onclick="openModal(this)">
+                <img src="assets/images/sellamii.png" alt="Art 31">
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="../index.html" class="back-button">BACK TO ONEOFEA.CH</a>
+            <a href="sella.html" class="back-button">BACK TO THE SELLA ZONE</a>
+        </div>
+    </div>
+
+    <!-- Modal for enlarged images -->
+    <div id="imageModal" class="modal" style="display: none;" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(element) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            modal.style.display = "flex";
+            modalImg.src = element.querySelector('img').src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
