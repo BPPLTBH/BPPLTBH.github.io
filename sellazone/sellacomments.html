@@ -32,69 +32,11 @@
             margin: 0;
             padding: 20px;
         }
-        .comment-form {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border: 2px solid #FF00FF;
-            margin: 10px;
-            color: #FFFFFF;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #FF1493;
-        }
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 8px;
-            background-color: #1a1a1a;
-            border: 2px solid #FF00FF;
-            color: #FFFFFF;
-            font-family: "Comic Sans MS", cursive;
-        }
-        .form-group textarea {
-            height: 100px;
-            resize: vertical;
-        }
-        .submit-btn {
-            background-color: #FF1493;
-            color: #FFFFFF;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-family: "Comic Sans MS", cursive;
-            font-weight: bold;
-            text-shadow: 1px 1px #000000;
-            transition: all 0.3s ease;
-        }
-        .submit-btn:hover {
-            background-color: #FF00FF;
-            box-shadow: 0 0 10px #FF00FF;
-        }
         .comments-section {
             padding: 20px;
             margin: 10px;
             border: 2px solid #FF00FF;
-        }
-        .comment {
-            background-color: #1a1a1a;
-            border: 2px solid #FF00FF;
-            margin: 10px 0;
-            padding: 15px;
-            box-shadow: 0 0 10px #FF1493;
-        }
-        .comment-header {
-            color: #FF00FF;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-shadow: 0 0 5px #FF00FF;
-        }
-        .comment-text {
-            color: #FFFFFF;
+            background-color: rgba(0, 0, 0, 0.8);
         }
         .navigation {
             background-color: #000000;
@@ -125,56 +67,22 @@
             100% { text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FF00FF; }
         }
     </style>
-    <script>
-        function addComment(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const comment = document.getElementById('comment').value;
-            const timestamp = new Date().toLocaleString();
-            
-            const commentsSection = document.getElementById('comments');
-            const newComment = document.createElement('div');
-            newComment.className = 'comment';
-            newComment.innerHTML = `
-                <div class="comment-header">Posted by ${name} on ${timestamp}</div>
-                <div class="comment-text">${comment}</div>
-            `;
-            
-            commentsSection.insertBefore(newComment, commentsSection.firstChild);
-            
-            // Clear the form
-            document.getElementById('comment-form').reset();
-        }
-    </script>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1 class="sparkle">SELLA ZONE COMMENTS</h1>
         </div>
-        <div class="comment-form">
-            <form id="comment-form" onsubmit="addComment(event)">
-                <div class="form-group">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="comment">Your Comment:</label>
-                    <textarea id="comment" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn sparkle">Post Comment</button>
-            </form>
-        </div>
-        <div class="comments-section" id="comments">
-            <div class="comment">
-                <div class="comment-header">Posted by SellaFan123 on 2/18/2025, 12:00:00 PM</div>
-                <div class="comment-text">omg sid and bella are literally me fr fr</div>
-            </div>
-            <div class="comment">
-                <div class="comment-header">Posted by BellaEnjoyer on 2/18/2025, 11:45:00 AM</div>
-                <div class="comment-text">this website is so aesthetic!! love the pink!!</div>
-            </div>
+        <div class="comments-section">
+            <!-- Replace OWNER/REPO with your GitHub username and repository name -->
+            <script src="https://utteranc.es/client.js"
+                    repo="OWNER/REPO"
+                    issue-term="pathname"
+                    label="💖 comments"
+                    theme="github-dark"
+                    crossorigin="anonymous"
+                    async>
+            </script>
         </div>
         <div class="navigation">
             <a href="../index.html" class="back-button">BACK TO ONEOFEA.CH</a>
