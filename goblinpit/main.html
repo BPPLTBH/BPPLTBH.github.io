@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE GOBLIN PIT</title>
+    <style>
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700; }
+            50% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; }
+            100% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700; }
+        }
+        
+        body {
+            background-color: #000000;
+            color: #ffd700;
+            font-family: "Comic Sans MS", cursive;
+            margin: 0;
+            background-image: url('/api/placeholder/50/50');
+        }
+        
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #1a0033;
+            padding: 20px;
+            border: 5px solid #4b0082;
+            box-shadow: 0 0 20px #4b0082;
+        }
+        
+        .header {
+            text-align: center;
+            background-color: #000000;
+            padding: 10px;
+            border: 3px dashed #9400d3;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #ffd700;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        .navigation {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .navigation a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        .navigation a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 20px #ffd700;
+        }
+        
+        .content {
+            background-color: #000000;
+            padding: 20px;
+            border: 3px solid #4b0082;
+        }
+        
+        .content h2 {
+            color: #ffd700;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #9400d3;
+        }
+        
+        marquee {
+            background-color: #4b0082;
+            color: #ffd700;
+            padding: 5px;
+            animation: glow 2s ease-in-out infinite;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Courier New", monospace;
+        }
+        
+        .counter-number {
+            background-color: #000000;
+            color: #ffd700;
+            padding: 5px 10px;
+            border: 2px solid #4b0082;
+            font-size: 24px;
+            letter-spacing: 2px;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        .content img, .footer img {
+            border: 2px solid #9400d3;
+        }
+        
+        .corner-image {
+            position: fixed;
+            bottom: 0px;
+            right: 20px;
+            z-index: 1000;
+        }
+       
+        
+        a {
+            color: #ffd700;
+        }
+        
+        a:hover {
+            text-shadow: 0 0 10px #ffd700;
+        }
+        
+        ul li {
+            color: #ffd700;
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // Get the stored count from localStorage or start at 1
+            let visitorCount = localStorage.getItem('visitorCount') || 0;
+            
+            // Increment the count
+            visitorCount = parseInt(visitorCount) + 1;
+            
+            // Save back to localStorage
+            localStorage.setItem('visitorCount', visitorCount);
+            
+            // Display the count with leading zeros
+            document.getElementById('visitor-count').textContent = 
+                visitorCount.toString().padStart(6, '0');
+        }
+    </script>
+</head>
+<body>
+    <img src="assets/images/shadowgif.gif" alt="Corner Image" class="corner-image">
+    
+    <div class="container">
+        <div class="header">
+            <h1>~*~ THE GOBLIN PIT ~*~</h1>
+            <marquee behavior="scroll" direction="left" scrollamount="5" scrolldelay="30" onmouseover="this.stop();" onmouseout="this.start();">
+                I AM A 5'5 BALDING MALE WHO LOVES MY LITTLE PONY AND SHADOW THE HEDGEHOG. I WANT TO HAVE SEX WITH A GOBLIN.
+            </marquee>
+        </div>
+        
+        <div class="navigation">
+            <a>Home</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="links.html">Links</a> |
+            <a href="blog.html">Blog</a>
+        </div>
+        
+        <div class="content">
+            <img src="assets/images/dall.png" alt="My Photo" align="right">
+            <h2>About Me</h2>
+            <p>I live in a fucking cave and I am evil. Bitch.</p>
+            
+            <h2>There are three things I love in life.</h2>
+            <ul>
+                <li>Sonic the Hedgehog</li>
+                <li>My Little Pony</li>
+                <li><a href="../sellazone/sella.html">Sella</a></li>
+                <li>...Now add "porn" to the end of all of them. Now yuo see.</li>
+            </ul>
+            
+            <h2>My Favorite Portals</h2>
+            <ul>
+                <li><a href="#">The Dark Chamber</a></li>
+                <li><a href="#">Mystic Gaming Realm</a></li>
+                <li><a href="#">Shadows Forum</a></li>
+            </ul>
+        </div>
+       
+		
+		        <div class="navigation">
+            <a href="../index.html" class="back-button">BACK TO ONEOFEA.CH</a>
+			
+        </div>
+        <div class="footer">
+            <p>© 2000 My Dark Realm. Best viewed in Netscape Navigator at midnight.</p>
+            <img src="/api/placeholder/88/31" alt="Made with Notepad">
+            <img src="/api/placeholder/88/31" alt="Best viewed with Netscape">
+        </div>
+    </div>
+</body>
+</html>
