@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nenya's Nook</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            border: 3px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+	    width: 300px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            transform: scale(1.6);
+        }
+
+        img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            padding: 30px 60px;
+            border: none;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative; /* Needed for positioning text */
+        }
+
+        .button-text {  /* This is now applied to the span */
+            font-family: "Times New Roman", sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            position: absolute; /* Position over button */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center text */
+        }
+
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="assets/images/nenyasNookLogo.png" alt="Nenya's Nook Logo">
+        </div>
+
+        <div class="button-grid">
+            <div class="button-container">
+                <button>
+                    <span class="button-text">WIP</span> </button>
+            </div>
+            <div class="button-container">
+                <button>
+                    <span class="button-text">WIP</span> </button>
+            </div>
+            <div class="button-container">
+                <button>
+                    <span class="button-text">WIP</span> </button>
+            </div>
+            <div class="button-container">
+                <button>
+                    <span class="button-text">WIP</span> </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
