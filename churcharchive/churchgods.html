@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"The Churchgods Chaletmaxxing Event"</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url('assets/images/chirstmasbg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-image {
+            margin-top: 10px;
+            max-width: 14%;
+            height: auto;
+        }
+
+        .video-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16/9;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .nav-button {
+            padding: 12px 24px;
+            font-size: 20px;
+            border: 4px solid red;
+			font-family: "Comic Sans MS", cursive;
+			font-weight: bold;
+            border-radius: 5px;
+            background-color: #0c8207;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .nav-button:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .nav-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="assets/images/churchgodsTitle.png" alt="Title" class="header-image">
+    
+    <div class="video-container">
+        <div class="video-wrapper">
+            <!-- Replace FILE_ID with your Google Drive file ID -->
+            <iframe
+                src="https://drive.google.com/file/d/1L2UyRvA4LTtZmzT1E-WUqLJBEIADuKjc/preview"
+                allow="autoplay"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="archive.html" class="nav-button">Return to Church Archives</a>
+        <a href="index.html" class="nav-button">Return to oneofea.ch</a>
+    </div>
+</body>
+</html>

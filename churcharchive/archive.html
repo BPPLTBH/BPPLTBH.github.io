@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Church Archive</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('assets/images/archiveBG.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .image-container {
+            display: flex;
+            gap: 20px;
+        }
+        .image-container a img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-container a img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <a href="https://drive.google.com/drive/folders/1pyJ-_XuQujrVBv6LT38BBBf0nkgCmY35?usp=drive_link">
+            <img src="assets/images/driveButton.png" alt="Church Google Drive">
+        </a>
+        <a href="cinema.html">
+            <img src="assets/images/cinemaButton.png" alt="Church Cinema">
+        </a>
+    </div>
+</body>
+</html>
