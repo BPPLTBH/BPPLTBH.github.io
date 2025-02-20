@@ -13,9 +13,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            /* Remove height: 100vh; */ /* This was the problem! */
+            min-height: 100vh; /* Ensures the body is at least the viewport height */
         }
 
+        /* ... rest of your CSS ... */
         .image-container {
             display: flex;
             gap: 20px;
