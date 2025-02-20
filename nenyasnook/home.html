@@ -47,7 +47,13 @@
             justify-content: center;
             align-items: center;
         }
-
+        .corner-image {
+            position: fixed;
+            bottom: 0px;
+            right: 20px;
+            z-index: 1000;
+        }
+	    
         button {
             padding: 30px 60px;
             border: none;
@@ -76,7 +82,7 @@
     </style>
 </head>
 <body>
-
+	<img src="assets/images/latviaflag.gif" alt="Corner Image" class="corner-image">
     <div class="container">
         <div class="image-container">
             <img src="assets/images/nenyasNookLogo.png" alt="Nenya's Nook Logo">
