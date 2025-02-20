@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Cinema</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('assets/images/cinemaBG.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Remove height: 100vh; */ /* This was the problem! */
+            min-height: 100vh; /* Ensures the body is at least the viewport height */
+        }
+
+        /* ... rest of your CSS ... */
+        .image-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .image-container a img {
+            width: 350px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container a img:hover {
+            transform: scale(1.5);
+        }
+
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            .image-container {
+                flex-direction: column; /* Stack images vertically */
+                align-items: center; /* Center images horizontally */
+                gap: 20px; /* Maintain gap between stacked images */
+            }
+
+            .image-container a img {
+                width: 90%; /* Make images responsive and occupy most of the screen width */
+                max-width: 400px; /* Set a maximum width if needed */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <a href="churchgods.html">
+            <img src="https://cdn.imgchest.com/files/7mmc9zemqm7.png" alt="The Churchgod Chaletmaxxing Event">
+        </a>
+        <a href="chelmsford.html">
+            <img src="https://cdn.imgchest.com/files/yd5cekdo994.png" alt="The Chelmsford Chronicles of Chaos">
+        </a>
+        <a href="steeple.html">
+            <img src="https://cdn.imgchest.com/files/4jdcvgqm2z4.png" alt="Operation: Steeple Bay">
+        </a>
+    </div>
+</body>
+</html>
