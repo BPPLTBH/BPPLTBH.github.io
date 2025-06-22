@@ -321,6 +321,7 @@
             rating: "not-slop", // Options: "slop", "partially-slop", "not-slop"
             description: "Fun game, witty writing, reasonably priced for the content available and future content coming at no extra cost. No microtransactions or pisstakes to be seen."
         },
+		  },
 		  {
             title: "Grand Theft Auto V",
             steamId: "3240220",
@@ -362,6 +363,7 @@
 
             filteredGames = games.filter(game => {
                 const matchesSearch = game.title.toLowerCase().includes(searchTerm) ||
+                                    
                 
                 const matchesFilter = filterValue === 'none' || game.rating === filterValue;
 
