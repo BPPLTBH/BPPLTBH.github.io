@@ -308,8 +308,7 @@
         
         let games = [
             // Add new games here by copying the template above
-            
- {
+						{ 
             title: "Dying Light 2",
             steamId: "534380",
             rating: "slop", // Options: "slop", "partially-slop", "not-slop"
@@ -321,13 +320,13 @@
             rating: "not-slop", // Options: "slop", "partially-slop", "not-slop"
             description: "Fun game, witty writing, reasonably priced for the content available and future content coming at no extra cost. No microtransactions or pisstakes to be seen."
         },
-		  },
 		  {
             title: "Grand Theft Auto V",
             steamId: "3240220",
             rating: "partially-slop", // Options: "slop", "partially-slop", "not-slop"
             description: "Blatantly scummy microtransactions despite being a paid game, lots of boring, grindy missions in the multiplayer. But overall a well made game with a lot of fun things to do that make it worth its selling price."
         }
+            
         ];
 
         let filteredGames = [...games];
@@ -362,8 +361,7 @@
             const filterValue = document.getElementById('filter-select').value;
 
             filteredGames = games.filter(game => {
-                const matchesSearch = game.title.toLowerCase().includes(searchTerm) ||
-                                    
+                const matchesSearch = game.title.toLowerCase().includes(searchTerm);
                 
                 const matchesFilter = filterValue === 'none' || game.rating === filterValue;
 
